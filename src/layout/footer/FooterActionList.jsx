@@ -13,7 +13,7 @@ function FooterActionList() {
             <Link>
               <img src={FLogo} alt="logo" className="mt-3" />
             </Link>
-            <p class="w-full mt-9 text-[#5D564C] md:text-base text-xs font-normal lg:leading-normal">
+            <p className="w-full mt-9 text-[#5D564C] md:text-base text-xs font-normal lg:leading-normal">
               Copyright@JNStudios 2023
             </p>
           </div>
@@ -23,7 +23,7 @@ function FooterActionList() {
             <Link>
               <img src={FLogo} alt="logo" className="mt-3" />
             </Link>
-            <p class="md:max-w-[211.81px] w-full md:mt-9 mt-2 text-[#5D564C] md:text-base text-xs font-normal lg:leading-normal">
+            <p className="md:max-w-[211.81px] w-full md:mt-9 mt-2 text-[#5D564C] md:text-base text-xs font-normal lg:leading-normal">
               Copyright@JNStudios 2023
             </p>
           </div>

@@ -22,13 +22,13 @@ const Hero = () => {
               </span>{" "}
               COLLECTION
             </h1>
-            <p class="text-[#B9AD87] md:text-[17px] text-xs font-normal lg:leading-7 leading-5 my-5">
+            <p className="text-[#B9AD87] md:text-[17px] text-xs font-normal lg:leading-7 leading-5 my-5">
               John Nelson's journey from a young boy in the inner city of
               Washington DC. to a renowned and compassionate artist was a
               testament to the power of passion, perseverance, and the belief
               that art can be a force for change
             </p>
-            <p class="text-[#CEC2AC] md:text-[26px] text-sm font-normal eb lg:leading-[33.80px]">
+            <p className="text-[#CEC2AC] md:text-[26px] text-sm font-normal eb lg:leading-[33.80px]">
               DISCOVER A RARE COLLECTION OF NFT WORLD IN JOHN NELSON ARTIST 40
               YEARS OF PENCIL DRAWINGS
             </p>
@@ -39,7 +39,7 @@ const Hero = () => {
           <div className="lg:max-w-[500px] w-full py-4 px-4 bg-[#46382D]">
             <img src={Nelson} alt="Nelson" className="w-full" />
             <div className="flex justify-between gap-4 items-center mt-5">
-              <p class="text-[#C9C8C8] md:text-base text-xs font-normal">
+              <p className="text-[#C9C8C8] md:text-base text-xs font-normal">
                 John Nelson NFT
               </p>
               <p className="text-[#EBEDF0] md:text-base text-xs font-normal">
@@ -50,7 +50,7 @@ const Hero = () => {
               </p>
             </div>
             <div className="flex justify-between gap-4 items-center mt-3">
-              <p class="text-white md:text-[22px] text-base font-bold">0.05 ETH</p>
+              <p className="text-white md:text-[22px] text-base font-bold">0.05 ETH</p>
               <div className="flex items-center gap-4">
                 <button onClick={handleClick2}>
                   <svg
@@ -74,7 +74,7 @@ const Hero = () => {
                     />
                   </svg>
                 </button>
-                <p class="text-center text-white md:text-[22px] text-base font-normal">
+                <p className="text-center text-white md:text-[22px] text-base font-normal">
                   {counter}
                 </p>
                 <button onClick={handleClick1}>
