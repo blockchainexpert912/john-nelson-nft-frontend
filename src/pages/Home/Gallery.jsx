@@ -9,10 +9,10 @@ const Vacation = () => {
   return (
     <>
       <div className="md:pt-28 pt-8 md:pb-28 pb-9 bg-[#46382D]">
-        <h1 class="text-center text-white md:text-[44px] text-[22px] font-normal eb uppercase lg:leading-[57.20px]">
+        <h1 className="text-center text-white md:text-[44px] text-[22px] font-normal eb uppercase lg:leading-[57.20px]">
           JOHN NELSON’S NFT Metaverse Gallery
         </h1>
-        <p class="lg:max-w-[1088px] w-full mx-auto text-center text-[#C9C8C8] md:text-base text-xs font-normal capitalize leading-relaxed mt-3 md:mb-10 px-3">
+        <p className="lg:max-w-[1088px] w-full mx-auto text-center text-[#C9C8C8] md:text-base text-xs font-normal capitalize leading-relaxed mt-3 md:mb-10 px-3">
           Step into the future of art at John Nelson's Metaverse Fine Art
           Gallery. Witness digital masterpieces and experience immersive
           creativity. Join us and redefine art's boundaries. Your journey
