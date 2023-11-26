@@ -80,15 +80,15 @@ function FooterActionList() {
             </div>
             <div className="flex md:flex-row flex-col-reverse">
               <div className="w-[200px]">
-                <p className="text-white md:text-[23px] text-base font-medium py-3 w-full">
+                <div className="text-white md:text-[23px] text-base font-medium py-3 w-full">
                   Get In Touch
                   <div className="md:-mt-0 -mt-4">
                     <Social />
                   </div>
-                </p>
+                </div>
               </div>
               <div className="md:w-[360px] w-full">
-                <p className="text-white md:text-[23px] text-base font-medium py-3 w-full">
+                <div className="text-white md:text-[23px] text-base font-medium py-3 w-full">
                   Get In Touch
                   <div className="flex md:mt-8 mt-4 w-full">
                     <input
@@ -100,7 +100,7 @@ function FooterActionList() {
                       Subscribe
                     </button>
                   </div>
-                </p>
+                </div>
               </div>
             </div>
           </div>

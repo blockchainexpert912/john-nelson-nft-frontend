@@ -8,6 +8,10 @@ import Cross from "../../assets/icons/cross.svg";
 import Wuser from "../../assets/icons/wuser.svg";
 import Wallet from "../../assets/icons/wallet.svg";
 import Wallet2 from "../../assets/icons/wallet2.svg";
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { goerli } from "viem/chains";
+
+
 function Navbar() {
   const currentPath = useLocation().pathname;
   const [navToggle, setNavToggle] = useState(false);
@@ -39,7 +43,7 @@ function Navbar() {
             {NavbarList.map((v, i) => {
               return (
                 <li
-                  key={v.id}
+                  key={i}
                   className="xl:h-[80px] lg:leading-[80px] leading-[50px] mr-[20px] relative group px-[15px] xl:px-0 text-center"
                 >
                   <Link
@@ -74,19 +78,139 @@ function Navbar() {
           </ul>
           <ul className="flex items-center gap-[20px] relative z-10">
             <div className="flex gap-5 items-center md:px-4 px-0 relative">
-              <button className="flex items-center justify-center group md:h-[60px] md:w-[230px] w-[150px] h-[32px] gap-3 bg-[#CEC2AC] text-center text-[#46382D] md:text-lg text-sm font-medium hover:bg-[#5D564C] hover:text-[#CEC2AC] ease-in-out transform duration-300">
-                <img
-                  src={Wallet}
-                  alt="Wallet"
-                  className="block group-hover:hidden"
-                />
-                <img
-                  src={Wallet2}
-                  alt="Wallet2"
-                  className="hidden group-hover:block"
-                />
-                Connect Wallet
-              </button>
+              
+              <ConnectButton.Custom>
+                {({
+                  account,
+                  chain,
+                  openAccountModal,
+                  openChainModal,
+                  openConnectModal,
+                  authenticationStatus,
+                  mounted,
+                }) => {
+                  // Note: If your app doesn't use authentication, you
+                  // can remove all 'authenticationStatus' checks
+                  const ready = mounted && authenticationStatus !== 'loading';
+                  const connected =
+                    ready &&
+                    account &&
+                    chain &&
+                    (!authenticationStatus ||
+                      authenticationStatus === 'authenticated');
+
+                  return (
+                    <div
+                      {...(!ready && {
+                        'aria-hidden': true,
+                        'style': {
+                          opacity: 0,
+                          pointerEvents: 'none',
+                          userSelect: 'none',
+                        },
+                      })}
+                    >
+                      {(() => {
+                        if (!connected) {
+                          return (
+                            // <button onClick={openConnectModal} type="button">
+                            //   Connect Wallet
+                            // </button>
+                            <button onClick={openConnectModal} className="flex items-center justify-center group md:h-[60px] md:w-[230px] w-[150px] h-[32px] gap-3 bg-[#CEC2AC] text-center text-[#46382D] md:text-lg text-sm font-medium hover:bg-[#5D564C] hover:text-[#CEC2AC] ease-in-out transform duration-300">
+                              <img
+                                src={Wallet}
+                                alt="Wallet"
+                                className="block group-hover:hidden"
+                              />
+                              <img
+                                src={Wallet2}
+                                alt="Wallet2"
+                                className="hidden group-hover:block"
+                              />
+                              Connect Wallet
+                            </button>
+                          );
+                        }
+
+                        if (chain.id != goerli.id) {
+                          return (
+                            // <button onClick={openChainModal} type="button">
+                            //   Wrong network
+                            // </button>
+                            <button onClick={openChainModal} className="flex items-center justify-center group md:h-[60px] md:w-[230px] w-[150px] h-[32px] gap-3 bg-[#CEC2AC] text-center text-[#46382D] md:text-lg text-sm font-medium hover:bg-[#5D564C] hover:text-[#CEC2AC] ease-in-out transform duration-300">
+                            <img
+                              src={Wallet}
+                              alt="Wallet"
+                              className="block group-hover:hidden"
+                            />
+                            <img
+                              src={Wallet2}
+                              alt="Wallet2"
+                              className="hidden group-hover:block"
+                            />
+                            Wrong Network
+                          </button>
+                          );
+                        }
+
+                        return (
+                          <div style={{ display: 'flex', gap: 12 }}>
+                            {/* <button
+                              onClick={openChainModal}
+                              style={{ display: 'flex', alignItems: 'center' }}
+                              type="button"
+                            >
+                              {chain.hasIcon && (
+                                <div
+                                  style={{
+                                    background: chain.iconBackground,
+                                    width: 12,
+                                    height: 12,
+                                    borderRadius: 999,
+                                    overflow: 'hidden',
+                                    marginRight: 4,
+                                  }}
+                                >
+                                  {chain.iconUrl && (
+                                    <img
+                                      alt={chain.name ?? 'Chain icon'}
+                                      src={chain.iconUrl}
+                                      style={{ width: 12, height: 12 }}
+                                    />
+                                  )}
+                                </div>
+                              )}
+                              {chain.name}
+                            </button> */}
+
+                            {/* <button onClick={openAccountModal} type="button">
+                              {account.displayName}
+                              {account.displayBalance
+                                ? ` (${account.displayBalance})`
+                                : ''}
+                            </button> */}
+
+                            <button onClick={openAccountModal} className="flex items-center justify-center group md:h-[60px] md:w-[230px] w-[150px] h-[32px] gap-3 bg-[#CEC2AC] text-center text-[#46382D] md:text-lg text-sm font-medium hover:bg-[#5D564C] hover:text-[#CEC2AC] ease-in-out transform duration-300">
+                              <img
+                                src={Wallet}
+                                alt="Wallet"
+                                className="block group-hover:hidden"
+                              />
+                              <img
+                                src={Wallet2}
+                                alt="Wallet2"
+                                className="hidden group-hover:block"
+                              />
+                              {account.displayName}
+                            </button>
+                            
+                          </div>
+                        );
+                      })()}
+                    </div>
+                  );
+                }}
+              </ConnectButton.Custom>
             </div>
             <li className="mr-[1px] flex xl:hidden ">
               <button onClick={toggleNavigation}>
