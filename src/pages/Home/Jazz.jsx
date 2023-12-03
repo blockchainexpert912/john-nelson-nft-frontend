@@ -1,10 +1,10 @@
-import React from "react";
+// import React from "react";
 import Ione from "../../assets/images/Home/i1.png";
 import Itwo from "../../assets/images/Home/i2.png";
 import Ithree from "../../assets/images/Home/i3.png";
 
-import { Navigation, Autoplay } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+// import { Navigation, Autoplay } from "swiper/modules";
+// import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 

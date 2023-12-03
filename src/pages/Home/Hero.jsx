@@ -1,8 +1,29 @@
 import React, { useState } from "react";
+import { usePrepareContractWrite, useContractWrite, useWaitForTransaction  } from 'wagmi'
 import Nelson from "../../assets/images/Home/nelson.png";
 import { NavLink } from "react-router-dom";
 import Social from "../../components/SocialIcon";
+import nft_abi from "./abi.json";
+import {ethers} from "ethers"
+
 const Hero = () => {
+  const {
+    config,
+    error: prepareError,
+    isError: isPrepareError,
+  } = usePrepareContractWrite({
+    address: '0xcEA87eCAfa901b7D0942d61dC1A4f2F275267E0C',
+    abi: nft_abi,
+    functionName: 'mint',
+    args: ["1"],
+    // overrides: {value: ethers.parseEther("0.5")},
+    value: ethers.parseEther("0.08")
+  })
+  const { data, error, isError, write } = useContractWrite(config)
+ 
+  const { isLoading, isSuccess } = useWaitForTransaction({
+    hash: data?.hash,
+  })
   const [counter, setCounter] = useState(0);
   const handleClick1 = () => {
     setCounter(counter + 1);
@@ -50,6 +71,7 @@ const Hero = () => {
               </p>
             </div>
             <div className="flex justify-between gap-4 items-center mt-3">
+
               <p className="text-white md:text-[22px] text-base font-bold">
                 0.05 ETH
               </p>
@@ -107,7 +129,7 @@ const Hero = () => {
                 </button>
               </div>
             </div>
-            <button className="flex mt-4 group items-center justify-center group h-[60px] w-full gap-3 bg-[#CEC2AC] text-center text-[#46382D] md:text-xl text-base md:font-medium font-semibold hover:bg-[#5D564C] hover:text-[#CEC2AC] ease-in-out transform duration-300">
+            <button onClick={() => write()} className="flex mt-4 group items-center justify-center group h-[60px] w-full gap-3 bg-[#CEC2AC] text-center text-[#46382D] md:text-xl text-base md:font-medium font-semibold hover:bg-[#5D564C] hover:text-[#CEC2AC] ease-in-out transform duration-300">
               <svg
                 width={30}
                 height={29}
