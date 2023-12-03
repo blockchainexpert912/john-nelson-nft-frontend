@@ -14,17 +14,17 @@ export const NavbarList = [
   {
     id: 2,
     name: "Free Airbnb",
-    link: "/free",
+    link: "/counter",
   },
   {
     id: 3,
     name: "John Nelson",
-    link: "/john",
+    link: "/mint",
   },
   {
     id: 3,
     name: "JN Studios",
-    link: "/jn",
+    link: "/sea",
   },
   {
     id: 4,
