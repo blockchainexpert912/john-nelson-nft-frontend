@@ -15,9 +15,9 @@ const Hero = () => {
     address: '0xcEA87eCAfa901b7D0942d61dC1A4f2F275267E0C',
     abi: nft_abi,
     functionName: 'mint',
-    args: ["5"],
+    args: ["1"],
     // overrides: {value: ethers.parseEther("0.5")},
-    value: ethers.parseEther("0.5")
+    value: ethers.parseEther("0.08")
   })
   const { data, error, isError, write } = useContractWrite(config)
  
