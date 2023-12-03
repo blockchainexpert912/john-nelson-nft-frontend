@@ -22,11 +22,11 @@ const Jazz = () => {
     <>
       <div className="bg-[#797164] md:pt-28 pt-8 md:pb-20 pb-8">
         <div className="container mx-auto 2xl:px-0 px-4 xl:max-w-[1450px] w-full">
-          <h1 class="text-white md:text-[44px] text-[22px] font-normal eb text-center uppercase lg:leading-[57.20px] md:mb-4 mb-3">
+          <h1 className="text-white md:text-[44px] text-[22px] font-normal eb text-center uppercase lg:leading-[57.20px] md:mb-4 mb-3">
             {" "}
             JAZZ Collection of NFT
           </h1>
-          <p class="lg:max-w-[654px] w-full mx-auto text-center text-[#C9C8C8] md:text-base text-xs font-normal leading-relaxed">
+          <p className="lg:max-w-[654px] w-full mx-auto text-center text-[#C9C8C8] md:text-base text-xs font-normal leading-relaxed">
             JAZZ Collection of NFTs, an innovative fusion of art and music that
             encapsulates the spirit of improvisation and creative expression.
           </p>

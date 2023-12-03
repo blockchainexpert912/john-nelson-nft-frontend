@@ -9,13 +9,13 @@ const Vacation = () => {
   return (
     <>
       <div className="md:pt-28 pt-8 md:pb-28 pb-9 bg-[#B9AD87]">
-        <h1 class="text-center md:text-[#46382D] text-white md:text-[44px] text-[22px] font-normal eb uppercase lg:leading-[57.20px]">
+        <h1 className="text-center md:text-[#46382D] text-white md:text-[44px] text-[22px] font-normal eb uppercase lg:leading-[57.20px]">
           WIN A FREE VACATION IN
         </h1>
-        <p class="text-center text-white md:text-base text-xs font-normal capitalize lg:leading-relaxed md:mt-3 mt-2 md:mb-4 mb-3">
+        <p className="text-center text-white md:text-base text-xs font-normal capitalize lg:leading-relaxed md:mt-3 mt-2 md:mb-4 mb-3">
           Airfare, accommodations and all expenses paid
         </p>
-        <p class="lg:max-w-[714px] w-full mx-auto text-center text-[#5D564C] md:text-base text-xs font-normal leading-relaxed px-5">
+        <p className="lg:max-w-[714px] w-full mx-auto text-center text-[#5D564C] md:text-base text-xs font-normal leading-relaxed px-5">
           Purchase any NFT in our collection and be automatically entered to win
           a free vacation to our exclusive properties Florida One lucky winner
           will be chosen at random each. Get ready for the vacation of a

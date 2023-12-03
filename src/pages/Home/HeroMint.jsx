@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Nelson from "../../assets/images/Home/nelson.png";
 import { NavLink } from "react-router-dom";
 import Social from "../../components/SocialIcon";
-const Hero = () => {
+const HeroMint = () => {
   const [counter, setCounter] = useState(0);
   const handleClick1 = () => {
     setCounter(counter + 1);
@@ -107,61 +107,8 @@ const Hero = () => {
                 </button>
               </div>
             </div>
-            <button className="flex mt-4 group items-center justify-center group h-[60px] w-full gap-3 bg-[#CEC2AC] text-center text-[#46382D] md:text-xl text-base md:font-medium font-semibold hover:bg-[#5D564C] hover:text-[#CEC2AC] ease-in-out transform duration-300">
-              <svg
-                width={30}
-                height={29}
-                viewBox="0 0 30 29"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  className="text-[#46382D] group-hover:text-[#CEC2AC]"
-                  d="M6.10704 16.8862C5.93982 18.8332 7.48063 20.5054 9.43951 20.5054H22.1603C23.8803 20.5054 25.3853 19.096 25.5167 17.3879L26.1617 8.42962C26.305 6.44685 24.8 4.83435 22.8053 4.83435H7.3851"
-                  stroke="currentColor"
-                  strokeWidth="2.14999"
-                  strokeMiterlimit={10}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  className="text-[#46382D] group-hover:text-[#CEC2AC]"
-                  d="M2.82239 2.58878H4.90072C6.19071 2.58878 7.20598 3.6996 7.09848 4.97765L6.50126 12.204"
-                  stroke="currentColor"
-                  strokeWidth="2.14999"
-                  strokeMiterlimit={10}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  className="text-[#46382D] group-hover:text-[#CEC2AC]"
-                  d="M19.8431 26.4776C20.6677 26.4776 21.3361 25.8091 21.3361 24.9845C21.3361 24.1599 20.6677 23.4915 19.8431 23.4915C19.0185 23.4915 18.35 24.1599 18.35 24.9845C18.35 25.8091 19.0185 26.4776 19.8431 26.4776Z"
-                  stroke="currentColor"
-                  strokeWidth="2.14999"
-                  strokeMiterlimit={10}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  className="text-[#46382D] group-hover:text-[#CEC2AC]"
-                  d="M10.2875 26.4776C11.1121 26.4776 11.7806 25.8091 11.7806 24.9845C11.7806 24.1599 11.1121 23.4915 10.2875 23.4915C9.46295 23.4915 8.79449 24.1599 8.79449 24.9845C8.79449 25.8091 9.46295 26.4776 10.2875 26.4776Z"
-                  stroke="currentColor"
-                  strokeWidth="2.14999"
-                  strokeMiterlimit={10}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  className="text-[#46382D] group-hover:text-[#CEC2AC]"
-                  d="M11.1834 9.7554H25.5167"
-                  stroke="currentColor"
-                  strokeWidth="2.14999"
-                  strokeMiterlimit={10}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              Buy Now
+            <button className="flex mt-4 group items-center justify-center group h-[60px] w-full gap-3 bg-[#CEC2AC] text-center text-[#46382D] md:text-xl text-base font-semibold hover:bg-[#5D564C] hover:text-[#CEC2AC] ease-in-out transform duration-300">
+              Mint
             </button>
           </div>
         </div>
@@ -170,4 +117,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroMint;
